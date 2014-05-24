@@ -1,0 +1,33 @@
+<div class="formUsuario">
+
+
+<form action="" method="post" onsubmit="return false">
+
+	<label>Matricula:</label>
+	<input type="text" name="mat" />
+	<hr />
+	<label>Nome:</label>
+	<input type="text" name="nom" />
+	<hr />
+	<label>Nível:</label>
+	<select name="niv">
+    	<option name="Usuario">Usuario</option>
+    	<option name="Operador">Operador</option>
+    	<option name="Administrador">Administrador</option>
+    </select>
+	<hr />
+	<label>Senha:</label>
+	<input type="password" name="sen" />
+	<hr />
+	<label>Ativo:</label>
+	<select name="ati">
+    	<option name="sim">sim</option>
+    	<option name="não">não</option>
+    </select><br /><br />
+	<input type="button" name="sub" value="Cadastrar" onclick="Ajax('../php/usuario-exec.php?act=inserir&mat='+mat.value+'&nom='+nom.value+'&niv='+niv.value+'&sen='+sen.value+'&ati='+ati.value,'msg')" />
+
+	<div id="msg"></div>
+
+</form>
+
+</div>

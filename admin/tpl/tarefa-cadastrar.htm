@@ -1,0 +1,37 @@
+<div class="formUsuario">
+
+<form action="" method="post" onsubmit="return false">
+
+	<label>Usuário:</label>
+	<input type="text" name="usm" />
+	<hr />
+	<label>Titulo:</label>
+	<input type="text" name="tit" />
+	<hr />
+	<label>Status:</label>
+	<select name="sta">
+    	<option name="Designado">Designado</option>
+    	<option name="Em andamento">Em andamento</option>
+    	<option name="Pendente">Pendente</option>
+    	<option name="Fechado">Fechado</option>
+    </select>
+	<hr />
+	<label>Criticidade:</label>
+	<select name="cri">
+    	<option name="Baixo">Baixo</option>
+    	<option name="Médio">Médio</option>
+    	<option name="Alto">Alto</option>
+    	<option name="Urgente">Urgente</option>
+    </select>
+	<hr />
+	Tarefa:<br />
+	<textarea name="tar"></textarea>
+	<br /><br />
+	<input type="button" name="sub" value="Cadastrar" onclick="Ajax('../php/tarefa-exec.php?act=inserir&tit='+tit.value+'&sta='+sta.value+'&cri='+cri.value+'&tar='+tar.value,'msg')" />
+
+	<div id="msg"></div>
+
+</form>
+
+
+</div>
